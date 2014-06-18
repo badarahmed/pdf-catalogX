@@ -44,10 +44,12 @@ http://docs.mongodb.org/manual/installation/
 
 
 ## Generating PDF Catalog:
-Run the populatedata.js script in dbx folder:
+Upload all PDF files in public/pdf folder. Then, run the populatedata.js script in dbx folder:
 ```
 node populatedata.js
 ```
+
+This will import all PDFs in public/pdf folder and automatically generate a catalog (in a mongodb database), generate thumbnails in public/img. It also creates search tags for each PDF based on PDF comma seperated title (PDF metadata) as input.
 
 ## Start Web Application:
 
