@@ -29,9 +29,22 @@ Run npm install to install all node dependencies:
 npm install
 ```
 
-## How to Use:
+Install MongoDB. Follow instructions here:
+http://docs.mongodb.org/manual/installation/
+
+
+## Generating PDF Catalog:
+Run the populatedata.js script in dbx folder:
+```
+node populatedata.js
+```
+*This script assumes MongoDB database is setup at localhost/pdfcatalogx. This is configurable. Please make sure to create a MongoDB database before attempting to generate the catalog.*
+
+## Start Web Application:
 
 You can use grunt (default target) to start a local webserver & serve the app over it:
 ```
 grunt
 ```
+
+**PDF CatalogX is now live!**
