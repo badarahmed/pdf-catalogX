@@ -1,0 +1,60 @@
+<h3> PDF CatalogX  </h3>
+
+<br/>
+<br/>
+
+<table style="margin: 0 auto">
+    <tr>
+    <td>
+        <div class="center-block" style="width: 550px">
+             <div class="input-group">
+                <input id="searchInput" type="text" class="form-control" value="{{query}}">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </span>
+            </div><!-- /input-group -->
+        </div>
+    </td>
+    </tr>
+</table>
+
+<br/>  <br/>
+
+<div class="row">
+    <div class="col-md-10">
+        <table class="table table-condensed">
+
+        {{#each data.rows}}
+        <tr>
+          {{#each cells}}
+          <td>
+            <div style="text-align: center">
+                <a href="/pdf/{{filename}}" target="_blank"> <img src="/img/{{filename}}.png" /> </a>
+            </div>
+            <div style="text-align: center">
+                {{#each tags}}
+                    <span class="bg-info"> {{this}} <span class="glyphicon glyphicon-tag"></span> </span> <br/> 
+                {{/each}}
+            </div>
+          </td>
+          {{/each}}
+        </tr>
+        {{/each}}
+
+        </table>
+    </div>
+</div>
+
+<script>
+    $('.btn').click( function(e) {
+        e.stopPropagation();
+        var searchVal = $('#searchInput').val();
+        window.location = '/search/' + searchVal;
+    });
+
+    $('#searchInput').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('.btn').click(); //Trigger search button click event
+        }
+    });
+</script>
