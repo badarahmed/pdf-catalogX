@@ -3,6 +3,16 @@ pdf-catalogX
 
 Publish PDF Catalog to the web. Automatically generates thumbnails &amp; searchable catalog (extracting metadata from PDF titles).
 
+## Screenshots
+
+### Importing PDF Catalog
+
+![1](https://raw.githubusercontent.com/badarahmed/pdf-catalogX/master/screenshots/catalog-import.png "Importing PDF Catalog")
+
+### Web UI
+
+![2](https://raw.githubusercontent.com/badarahmed/pdf-catalogX/master/screenshots/screenshot-webui.png "Web UI")
+
 
 ## Stack:
 
@@ -38,7 +48,6 @@ Run the populatedata.js script in dbx folder:
 ```
 node populatedata.js
 ```
-*This script assumes MongoDB database is setup at localhost/pdfcatalogx. This is configurable. Please make sure to create a MongoDB database before attempting to generate the catalog.*
 
 ## Start Web Application:
 
